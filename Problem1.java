@@ -13,14 +13,7 @@ public class Problem1 {
             int n5 = (int) Math.floor(numInteger / 5);
             int n15 = (int) Math.floor(numInteger / 15);
 
-            for (int counter = 1; counter <= n3; counter++) {
-                if (counter <= n15)
-                    sumInteger = sumInteger - (7 * counter);
-                else if (counter <= n5)
-                    sumInteger = sumInteger + (8 * counter);
-                else
-                    sumInteger = sumInteger + (3 * counter);
-            }
+            sumInteger += ((n3 * (3 + (n3 * 3))) + (n5 * (5 + (n5 * 5))) - (n15 * (15 + (n15 * 15)))) / 2;
 
             System.out.println(sumInteger);
         }
